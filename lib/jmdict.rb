@@ -1,9 +1,7 @@
 require "jmdict/version"
 require 'nokogiri'
 
-
-module JMDict
-  class JMDict
+class JMDict
   	@jmdict_file = nil
 
   	def initialize(filename)
@@ -100,4 +98,3 @@ module JMDict
   	end
 
   end
-end

@@ -21,7 +21,7 @@ Or install it yourself as:
 And use it in your application:
 
 ```ruby
-require 'kanjidic2'
+require 'jmdict'
 ```
 
 ## Dependencies
