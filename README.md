@@ -61,6 +61,10 @@ Please read the [DTD](view-source:http://www.edrdg.org/jmdict/dtd-jmdict.xml) fo
 
 I decided to put a version number that follows the same pattern as the official DTD revision version for aknowledge the compatibility of this gem with the XML file used.
 
+## Performance
+
+It's important to advice about the memory and time consumption that all this parsing could take. The file itself and the Nokogiri structures takes about ~2 GB of memory with or without this gem. In matter of time we have a notable increase for converting the Node element into a Hash. Using this gem therefore takes more time than dealing with Nokogiri directly but it's aimed for a one shot use for processing the XML file and brings a more unified form of accessing all the fields.
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

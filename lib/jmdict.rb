@@ -84,7 +84,7 @@ class JMDict
   				gloss['g_type'] = g['g_type'] if g.key? 'g_type'
 
   				# The gloss could have a text PCData or a 'pri' element.
-  				# Currently in rev 1.09 there is no 'pri' at all. Just for the sake of DTD.
+  				# Currently in rev 1.09 there is no 'pri' with content at all. Just for the sake of DTD.
   				gloss['pri'] = g.at_css('pri').text unless g.at_css('pri').nil?
 
           gloss['gloss'] = g.text
