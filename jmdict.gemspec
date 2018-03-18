@@ -9,9 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ramiro Antonio"]
   spec.email         = ["ramiro.antonio@outlook.com"]
 
-  spec.summary       = %q{A gem to get parsed entries of the JMDict Japanese dictionary}
+  spec.summary       = %q{A wrapper for JMDict (http://www.edrdg.org/jmdict/edict_doc.html)}
   spec.description   = %q{This gem parses the JMDict XML file to get a more friendly hash interface for its entries}
   spec.homepage      = "https://github.com/r-antonio/jmdict"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -22,5 +23,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "nokogiri"
+  spec.add_dependency "nokogiri", "~> 1.7"
 end

@@ -59,7 +59,7 @@ Please read the [DTD](view-source:http://www.edrdg.org/jmdict/dtd-jmdict.xml) fo
 
 ## Versioning
 
-I decided to put a version number that follows the same pattern as the official DTD revision version for aknowledge the compatibility of this gem with the XML file used.
+I decided to put a version number that follows the same pattern as the official DTD revision version for aknowledge the compatibility of this gem with the XML file used. The minor number is reserved for bugfixes or changes of the gem.
 
 ## Performance
 
