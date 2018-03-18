@@ -85,7 +85,7 @@ class JMDict
 
   				# The gloss could have a text PCData or a 'pri' element.
   				# Currently in rev 1.09 there is no 'pri' at all. Just for the sake of DTD.
-  				gloss['pri'] = g.css('pri').text if g.css('pri').present?
+  				gloss['pri'] = g.at_css('pri').text if g.at_css('pri').present?
 
           gloss['gloss'] = g.text
           sense['gloss'] << gloss
