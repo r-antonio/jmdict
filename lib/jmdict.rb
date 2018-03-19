@@ -5,12 +5,14 @@ class JMDict
   	@jmdict_file = nil
 
   	def initialize(filename)
-  		@jmdict_file = File.open(filename) { |f| Nokogiri::XML(f) }
+  		@jmdict_file = Nokogiri::XML::Reader(File.open(filename))
   	end
 
   	def each_entry()
-  		@jmdict_file.xpath('JMdict/entry').each do |e|
-  			yield(parse_entry(e))
+      @jmdict_file.each do |node|
+  			next if node.name != 'entry'
+  			next if node.node_type != Nokogiri::XML::Reader::TYPE_ELEMENT
+  			yield(parse_entry(Nokogiri::XML(node.outer_xml)))
   		end
   	end
 
